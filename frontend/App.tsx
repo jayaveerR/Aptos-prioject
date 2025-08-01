@@ -1,24 +1,20 @@
-import { useWallet } from "@aptos-labs/wallet-adapter-react";
-// Internal Components
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Header } from "@/components/Header";
-import { WalletDetails } from "@/components/WalletDetails";
-import { NetworkInfo } from "@/components/NetworkInfo";
-import { AccountInfo } from "@/components/AccountInfo";
-import { TransferAPT } from "@/components/TransferAPT";
-import { MessageBoard } from "@/components/MessageBoard";
-import { TopBanner } from "@/components/TopBanner";
 
-function App() {
-  const { connected } = useWallet();
+import Home from './Home'
+import FirstPage from './Firstpage'; 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+export default function HomeApp() {
+  
 
-  return (
-    <>
-      <TopBanner />
-      <Header />
-     <h1>hello world</h1>
-    </>
-  );
+    return (
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/firstpage" element={<FirstPage />} />
+                    
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
 }
 
-export default App;
