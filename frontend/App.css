@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,4 +12,7 @@
   border-radius: var(--radius);
   cursor: pointer;
     transition: background-color 0.3s ease;
+}
+.App{
+  background-color:red;
 }
